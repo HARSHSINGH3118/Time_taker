@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Time Taker",
+  "version": "2.1",
+  "description": "A Chrome extension to track the time spent on each website and view the history.",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "action": {
+    "default_popup": "pages/popup.html",
+    "default_icon": {
+      "16": "assets/chronometer.png",
+      "48": "assets/wheel.png",
+      "128": "assets/back-in-time.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pages/auth.html",
+        "pages/popup.html",
+        "pages/history.html",
+        "pages/auth.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+    <div class="auth-container glossy">
+        <h1 id="auth-heading" class="auth-heading">Sign Up</h1>
+        <form id="authForm" class="auth-form">
+            <input type="text" id="name" placeholder="Name" class="auth-input" required>
+            <input type="email" id="email" placeholder="Email" class="auth-input" required>
+            <input type="password" id="password" placeholder="Password" class="auth-input" required>
+            <button type="submit" id="authBtn" class="auth-btn">Sign Up</button>
+            <p id="toggleAuth" class="toggle-auth">Already have an account? <span id="loginLink">Log In</span></p>
+        </form>
+        <p id="authMessage" class="auth-message"></p>
+    </div>
+    <script src="auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  min-height: 100vh;
+  background: linear-gradient(
+    145deg,
+    #1e1e1e,
+    #2c2c2c
+  ); /* Dark gradient background */
+}
+
+.dark-theme {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Transparent for glassmorphism */
+  color: #ffffff;
+}
+
+/* Glassmorphism and Glossy Finish */
+.glossy {
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Transparent background for glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glassmorphism */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3),
+    0 -2px 6px rgba(255, 255, 255, 0.05) inset; /* Inner glossy shadow */
+  min-width: 320px; /* Set minimum width */
+  max-width: 400px; /* Set maximum width for form consistency */
+  width: 100%; /* Ensures the container stays responsive */
+  text-align: center;
+  transition: all 0.3s ease; /* Smooth transition for hover and size adjustments */
+}
+
+.glossy:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5),
+    0 -2px 10px rgba(255, 255, 255, 0.1) inset;
+}
+
+/* Auth Form Styles */
+.auth-container {
+  display: flex;
+  flex-direction: column; /* Ensure fields are stacked vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-heading {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.auth-input {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1); /* Transparent input */
+  backdrop-filter: blur(5px);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
+    0 -2px 6px rgba(255, 255, 255, 0.05) inset;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.auth-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2); /* Highlight on focus */
+}
+
+.auth-input::placeholder {
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.auth-input:hover::placeholder {
+  color: #fff;
+}
+
+.auth-btn {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  background: linear-gradient(145deg, #4caf50, #45a049); /* Glossy button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(145deg, #45a049, #4caf50); /* Hover effect */
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5),
+    0 -2px 6px rgba(0, 255, 0, 0.3) inset;
+}
+
+.toggle-auth {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 15px;
+  transition: color 0.3s ease;
+}
+
+.toggle-auth:hover {
+  color: #fff;
+}
+
+.auth-message {
+  color: #ff4d4d;
+  margin-top: 10px;
+}
+
+/* Popup-specific Styles */
+.popup-container {
+  max-width: 400px;
+  min-width: 320px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3),
+    0 -2px 6px rgba(255, 255, 255, 0.05) inset;
+  text-align: center;
+}
+
+.popup-heading {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.track-history-btn {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  background: linear-gradient(145deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.track-history-btn:hover {
+  background: linear-gradient(145deg, #45a049, #4caf50);
+}
+
+/* Reverted Logout Button Style */
+.logout-btn {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  background: linear-gradient(145deg, #e74c3c, #c0392b); /* Red glossy button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(145deg, #c0392b, #e74c3c); /* Hover effect */
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5),
+    0 -2px 6px rgba(255, 0, 0, 0.3) inset;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 500px) {
+  .auth-container,
+  .popup-container,
+  .history-container {
+    padding: 20px;
+    min-width: 280px;
+  }
+
+  .auth-heading,
+  .popup-heading {
+    font-size: 1.8rem;
+  }
+
+  .auth-input,
+  .auth-btn,
+  .track-history-btn,
+  .logout-btn {
+    max-width: 320px; /* Adjusted for smaller screens */
+  }
+
+  .auth-input {
+    padding: 10px;
+  }
+}
